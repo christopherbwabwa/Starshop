@@ -5,9 +5,11 @@
 {% block body %}
 <h1>Starshop, There you go!</h1>
 
-<div>The actual number of it is {{ numberofStars }}</div>
+<div>
+    Browse through {{ships|length * 10 }} starships!
+</div>
 
-{% if numberofStars > 20 %}
+{% if ships|length > 20 %}
 
 {# Do something #}
     <div> That's awesome <div>
