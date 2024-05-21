@@ -15,9 +15,6 @@ class MainController extends AbstractController
         $ships = $starshipRepository->findAll();
         $myShip = $ships[array_rand($ships)];
 
-        //dd($myShip);
-
-
         return $this->render('main/homepage.html.twig', [
             'myShip' => $myShip,
             'ships' => $ships
